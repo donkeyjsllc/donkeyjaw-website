@@ -5,50 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donkey Jaw Services | The First Tool You Reach For</title>
     <style>
-        /* === COLOR CONTROL PANEL === */
-        /* Swap your hex codes in right here to change the whole site */
         :root {
-            --bg-main:  #263E5C;       /* Main website background */
-            --bg-sections: #111111;   /* Background for the cards and form */
-            --text-main: #d1d1d1;     /* Main paragraph text */
-            --brand-gold: #D4AF37;    /* The Donkey Jaw Gold */
-            --brand-action: #FF8C00;  /* The Orange */
-            --border-color: #333333;  /* Lines and borders */
+            --bg-main: #263E5C;
+            --bg-sections: #111111;
+            --text-main: #d1d1d1;
+            --brand-gold: #D4AF37;
+            --brand-action: #FF8C00;
+            --border-color: #333333;
         }
 
         body { font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; }
-        
-        /* The Header */
         header { background: #000; padding: 80px 20px; text-align: center; border-bottom: 4px solid var(--brand-gold); }
         h1 { color: var(--brand-gold); font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: 5px; }
         .tagline { color: var(--brand-action); font-weight: bold; text-transform: uppercase; margin-top: 15px; font-size: 1em; letter-spacing: 1px; }
 
         section { max-width: 950px; margin: auto; padding: 60px 20px; }
-        
-        /* Typography */
         h2 { color: var(--brand-gold); text-transform: uppercase; font-size: 1.8em; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 0; }
         .story-text p { font-size: 1.15em; line-height: 1.8; text-align: justify; margin-bottom: 25px; }
         .highlight { color: var(--brand-action); font-weight: bold; }
 
-        /* The Scripture Box */
         .scripture-box { text-align: center; margin-bottom: 50px; padding: 30px; border: 1px inset var(--border-color); background: var(--bg-sections); }
         .scripture-text { font-style: italic; color: var(--brand-gold); font-size: 1.1em; margin: 0; }
         .scripture-ref { text-align: right; color: var(--brand-action); font-weight: bold; margin-top: 15px; font-size: 0.9em; letter-spacing: 1px; }
 
-        /* App Cards */
         .deployment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
         .card { background: var(--bg-sections); border: 1px solid var(--border-color); padding: 30px; position: relative; border-left: 4px solid var(--brand-gold); }
-        .card:hover { border-color: var(--brand-action); }
         .card h3 { color: #fff; margin-top: 0; text-transform: uppercase; }
         .status-badge { position: absolute; top: -10px; right: 10px; background: var(--brand-action); color: #000; font-size: 0.7em; padding: 3px 10px; font-weight: bold; }
 
-        /* The Contact Form */
         .contact-wrap { background: var(--bg-sections); padding: 50px; border-top: 3px solid var(--brand-gold); border-radius: 4px; max-width: 700px; margin: auto; }
         label { display: block; margin-top: 20px; color: var(--brand-gold); text-transform: uppercase; font-size: 0.8em; font-weight: bold; }
         input, textarea { width: 100%; background: var(--bg-main); border: 1px solid var(--border-color); color: var(--text-main); padding: 15px; margin-top: 5px; box-sizing: border-box; font-family: inherit; }
-        input:focus, textarea:focus { border-color: var(--brand-action); outline: none; }
-        .submit-btn { background: var(--brand-action); color: #000; border: none; padding: 20px; width: 100%; margin-top: 30px; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 1.1em; transition: 0.2s; }
-        .submit-btn:hover { background: var(--brand-gold); }
+        .submit-btn { background: var(--brand-action); color: #000; border: none; padding: 20px; width: 100%; margin-top: 30px; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 1.1em; }
 
         @media (max-width: 768px) { .deployment-grid { grid-template-columns: 1fr; } }
     </style>
@@ -57,28 +45,20 @@
 
 <header>
     <img src="logo.jpg" alt="Donkey Jaw Services Logo" style="height: 220px; margin-bottom: 20px; border-radius: 50%; border: 2px solid var(--brand-gold);">
-    
     <h1>DONKEY JAW SERVICES</h1>
     <p class="tagline">Rusted and forgotten, but the first tool you reach for.</p>
 </header>
 
 <section>
     <div class="scripture-box">
-        <p class="scripture-text">
-            "And he found a new jawbone of an ass, and put forth his hand, and took it, and slew a thousand men therewith. And Samson said, With the jawbone of an ass, heaps upon heaps, with the jaw of an ass have I slain a thousand men."
-        </p>
+        <p class="scripture-text">"And he found a new jawbone of an ass, and put forth his hand, and took it, and slew a thousand men therewith..."</p>
         <p class="scripture-ref">— JUDGES 15:15-16</p>
     </div>
 
     <h2>The Foundation</h2>
     <div class="story-text">
-        <p>I wasn’t raised in a shop, but I was raised with the patience of a woodsman. Growing up in the city, the outdoors was something I had to work for. I’ve been a fisherman since I could walk and a hunter since I was 14—finding my own way to the field even when the barriers were high. Raised by a single mother, who was raised by a single mother with strong ties to the church, <span class="highlight">I learned early that if you want the results, you put in the time.</span></p>
-        
-        <p>I wanted to feel the demands and experience the heavy-lifting of the oilfield; that drive led me to the high-pressure environment of <strong>Water Transfers</strong>. When the world shifted during the COVID exit, I pivoted and took those industrial skills to the <strong>Sand Mine</strong> as a general laborer because that’s where the work was. I wasn't just there for a paycheck; I was there to learn how the systems ran—and why they so often failed the people using them.</p>
-        
-        <p>The name <strong>Donkey Jaw Services</strong> comes from the old story of Samson, who used a discarded tool to win a fight no one thought he could. Most people overlook the "donkey"—an animal known for quiet endurance and carrying the heavy load. I build the tools that share that same DNA. I’m not here to reinvent the wheel; I’m here to give the trades a <span class="highlight">practical advantage</span> that makes the "old way" of doing things obsolete.</p>
-        
-        <p>I eventually found myself outside the walls of the "status quo" because I wouldn't stop pointing out the inefficiencies. Now, I use that same persistence to build digital infrastructure that works as hard as the crew on the ground.</p>
+        <p>I wasn’t raised in a shop, but I was raised with the patience of a woodsman. Raised by a single mother, who was raised by a single mother with strong ties to the church, <span class="highlight">I learned early that if you want the results, you put in the time.</span></p>
+        <p>The name <strong>Donkey Jaw Services</strong> comes from the old story of Samson, who used a discarded tool to win a fight no one thought he could. I build the tools that share that same DNA.</p>
         
         <p style="color: var(--brand-gold); font-weight: bold; font-size: 1.3em; margin-top: 40px; border-left: 3px solid var(--brand-action); padding-left: 15px; letter-spacing: 1px;">
             TRISTEN PATTON<br>
@@ -87,45 +67,34 @@
     </div>
 </section>
 
-<section style="background-color: var(--bg-main);">
+<section>
     <h2>Proprietary Tools</h2>
     <div class="deployment-grid">
-        <div class="card">
-            <div class="status-badge">BETA</div>
-            <h3>ProfitPulse</h3>
-            <p>A high-speed auction calculator built for salvage and estate recovery. It handles the buyer's premium and the hidden logistics math on the fly so you can bid with absolute certainty.</p>
-        </div>
-        <div class="card">
-            <div class="status-badge">IN DEV</div>
-            <h3>ServiceSync</h3>
-            <p>The digital maintenance vault. Real-time fleet tracking for every oil change, filter replacement, and routine inspection across your entire heavy equipment lineup.</p>
-        </div>
+        <div class="card"><div class="status-badge">BETA</div><h3>ProfitPulse</h3><p>High-speed auction calculator built for salvage and estate recovery.</p></div>
+        <div class="card"><div class="status-badge">IN DEV</div><h3>ServiceSync</h3><p>The digital maintenance vault for heavy equipment fleet tracking.</p></div>
     </div>
 </section>
 
 <div style="background-color: #050505; padding: 80px 20px; width: 100%; box-sizing: border-box;">
     <div class="contact-wrap">
         <h2 style="border: none; text-align: center; font-size: 2em; margin-bottom: 10px;">Let's Talk Shop</h2>
-        <p style="text-align: center; color: var(--text-main); margin-bottom: 30px;">Ready to optimize your fleet or maximize your asset recovery? Drop the details below.</p>
-        
         <form action="https://formspree.io/f/mvzwoqgk" method="POST">
-    <input type="hidden" name="_next" value="https://donkeyjsllc.github.io/donkeyjaw-website/thanks.html">
-
+            <input type="hidden" name="_next" value="https://donkeyjsllc.github.io/donkeyjaw-website/thanks.html">
+            
+            <label>Name / Business</label>
+            <input type="text" name="name" required>
             <label>Email Address</label>
             <input type="email" name="email" required>
-            
-            <label>How can we optimize your operation?</label>
+            <label>Message</label>
             <textarea name="message" rows="5" required></textarea>
-            
             <button type="submit" class="submit-btn">Reach Out</button>
         </form>
     </div>
 </div>
 
-
 <footer style="text-align: center; padding: 40px; font-size: 0.9em; color: #888888; border-top: 1px solid var(--border-color); background-color: #000;">
     &copy; 2026 DONKEY JAW SERVICES LLC | TRISTEN PATTON | CHOCTAW, OK<br>
-    <a href="https://www.linkedin.com/in/tristen-patton-8b91853b5" style="color: var(--brand-gold); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; letter-spacing: 1px;">CONNECT ON LINKEDIN</a>
+    <a href="#" style="color: var(--brand-gold); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px;">CONNECT ON LINKEDIN</a>
 </footer>
 
 </body>
