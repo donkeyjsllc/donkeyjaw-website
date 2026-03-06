@@ -107,19 +107,23 @@
     <div class="contact-wrap">
         <h2 style="border: none; text-align: center; font-size: 2em; margin-bottom: 10px;">Let's Talk Shop</h2>
         <p style="text-align: center; color: var(--text-main); margin-bottom: 30px;">Ready to optimize your fleet or maximize your asset recovery? Drop the details below.</p>
-        
         <form action="https://formspree.io/f/mvzwoqgk" method="POST">
-            <label>Name / Business</label>
-            <input type="text" name="name" required>
-            
-            <label>Email Address</label>
-            <input type="email" name="email" required>
-            
-            <label>How can we optimize your operation?</label>
-            <textarea name="message" rows="5" required></textarea>
-            
-            <button type="submit" class="submit-btn">Reach Out</button>
-        </form>
+
+    <input type="hidden" name="_next" value="https://donkeyjsllc.github.io/donkeyjaw-website/thanks.html">
+
+    <label for="name">Name / Business</label>
+    <input type="text" name="name" id="name" required>
+    
+    <label for="email">Email Address</label>
+    <input type="email" name="email" id="email" required>
+    
+    <label for="message">Message</label>
+    <textarea name="message" id="message" rows="5" required></textarea>
+
+    <button type="submit" class="submit-btn">Reach Out</button>
+</form>
+
+       
     </div>
 </div>
 
