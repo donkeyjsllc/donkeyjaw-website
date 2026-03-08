@@ -102,15 +102,8 @@
         </div>
     </div>
 </section>
-
-<div style="background-color: #050505; padding: 80px 20px; width: 100%; box-sizing: border-box;">
-    <div class="contact-wrap">
-        <h2 style="border: none; text-align: center; font-size: 2em; margin-bottom: 10px;">Let's Talk Shop</h2>
-        <p style="text-align: center; color: var(--text-main); margin-bottom: 30px;">Ready to optimize your fleet or maximize your asset recovery? Drop the details below.</p>
-        <form action="https://formspree.io/f/mvzwoqgk" method="POST">
-
-    <input type="hidden" name="_next" value="https://donkeyjsllc.github.io/donkeyjaw-website/thanks.html">
-
+</form>
+    <form action="https://formspree.io/f/mvzwoqgk" method="POST" id="contact-form">
     <label for="name">Name / Business</label>
     <input type="text" name="name" id="name" required>
     
@@ -121,6 +114,29 @@
     <textarea name="message" id="message" rows="5" required></textarea>
 
     <button type="submit" class="submit-btn">Reach Out</button>
+</form>
+
+<script>
+    var form = document.getElementById("contact-form");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Stops the default white page from loading
+        var data = new FormData(form);
+        fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                // Instantly routes to your custom page
+                window.location.href = "https://donkeyjsllc.github.io/donkeyjaw-website/thanks.html";
+            } else {
+                alert("Error sending message. Please try again.");
+            }
+        });
+    });
+</script>
+
+
 </form>
 
        
