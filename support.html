@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support The Build | Donkey Jaw Services</title>
+    <style>
+        /* === COLOR CONTROL PANEL === */
+        :root {
+            --bg-main:  #263E5C;
+            --bg-sections: #111111;
+            --text-main: #d1d1d1;
+            --brand-gold: #D4AF37;
+            --brand-action: #FF8C00;
+            --border-color: #333333;
+        }
+
+        body { font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; }
+        
+        /* --- NAVIGATION BAR --- */
+        .top-nav { background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .nav-brand { color: var(--brand-gold); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 1.2em; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: var(--text-main); text-decoration: none; text-transform: uppercase; font-weight: bold; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--brand-action); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 5px; }
+        .hamburger span { display: block; width: 25px; height: 3px; background-color: var(--brand-gold); transition: 0.3s; }
+
+        /* The Header */
+        header { background: #000; padding: 60px 20px; text-align: center; border-bottom: 4px solid var(--brand-gold); }
+        h1 { color: var(--brand-gold); font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: 5px; }
+
+        section { max-width: 850px; margin: auto; padding: 60px 20px; }
+        h2 { color: var(--brand-gold); text-transform: uppercase; font-size: 1.8em; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 0; }
+        
+        /* The Card Layout */
+        .card { background: var(--bg-sections); border: 1px solid var(--border-color); padding: 40px; margin-bottom: 40px; border-left: 4px solid var(--brand-gold); }
+        .card p { font-size: 1.15em; line-height: 1.8; text-align: justify; margin-bottom: 25px; }
+        
+        /* Tip Jar Specifics */
+        .tip-jar-container { text-align: center; padding: 30px; background-color: #1a1a1a; border: 1px dashed var(--brand-gold); margin-top: 30px; }
+        .tip-jar-container h3 { color: var(--brand-gold); text-transform: uppercase; margin-top: 0; margin-bottom: 20px; }
+        .paypal-form-wrap { display: flex; justify-content: center; align-items: center; }
+
+        /* FAQ Layout */
+        .faq-item { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
+        .faq-item h3 { color: var(--brand-action); margin-bottom: 10px; font-size: 1.2em; }
+        .faq-item p { margin-top: 0; font-size: 1.05em; text-align: left; }
+
+        /* Buttons */
+        .btn-gold { display: inline-block; background-color: var(--brand-action); color: #000; text-decoration: none; padding: 15px 30px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border: none; cursor: pointer; transition: 0.2s; margin-top: 15px; }
+        .btn-gold:hover { background-color: var(--brand-gold); }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) { 
+            .hamburger { display: flex; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 0; text-align: center; }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 15px; border-bottom: 1px solid var(--border-color); width: 100%; box-sizing: border-box; }
+            .nav-links a:last-child { border-bottom: none; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="nav-brand">DONKEY JAW</div>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+        <a href="./index.html">HOME</a>
+        <a href="./support.html">SUPPORT THE BUILD</a>
+    </div>
+</nav>
+
+<header>
+    <h1>SUPPORT THE BUILD</h1>
+</header>
+
+<section>
+    <div class="card">
+        <h2>The Tip Jar</h2>
+        <p>
+            FUEL THE BUILD. I built Donkey Jaw Services to give the trades a digital advantage. I’m a solo developer bootstrapping these tools from the ground up—no corporate backing, just late nights and sweat equity. If Maintenance Vault or TrueMule Calculator helps you run your shop, track your gear, or protect your margins, consider throwing a few bucks in the tip jar. Every contribution goes directly toward server costs and keeping these tools running.
+        </p>
+
+        <div class="tip-jar-container">
+            <h3>Drop a Tip</h3>
+            
+            <div class="paypal-form-wrap">
+                <form action="https://www.paypal.com/donate" method="post" target="_top">
+                    <input type="hidden" name="hosted_button_id" value="7XQMS4R7SBXCN" />
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <h3>Are Maintenance Vault and TrueMule Calculator free?</h3>
+            <p>The core tools are built to be accessible to the guys on the ground. Server hosting and database costs add up, which is why the tip jar exists to keep the infrastructure running smoothly for everyone in the trades.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>I have a feature request or found a bug. Where do I send it?</h3>
+            <p>I build these tools for you. If you need a specific tracking feature added or something isn't calculating right, shoot me an email directly.</p>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <p style="color: var(--brand-gold); font-weight: bold; text-transform: uppercase;">Need direct support or want to talk shop?</p>
+            <a href="mailto:tristen@donkeyjawservices.com" class="btn-gold">Email Tristen</a>
+        </div>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 40px; font-size: 0.9em; color: #888888; border-top: 1px solid var(--border-color); background-color: #000; margin-top: 40px;">
+    &copy; 2026 DONKEY JAW SERVICES LLC | TRISTEN PATTON | CHOCTAW, OK<br>
+    <a href="https://www.linkedin.com/in/tristen-patton-8b91853b5" style="color: var(--brand-gold); text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; letter-spacing: 1px;">CONNECT ON LINKEDIN</a>
+</footer>
+
+<script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburgerBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
