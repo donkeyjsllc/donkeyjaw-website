@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintenance Vault | Donkey Jaw Services</title>
+    <title>Maintenance Vault | Universal Asset & Maintenance Tracker</title>
      <link rel="icon" type="image/jpg" href="logo.jpg">
     <link rel="apple-touch-icon" href="logo.jpg">
     <style>
@@ -53,6 +53,14 @@
         .btn-gold { display: inline-block; background-color: var(--brand-action); color: #000; text-decoration: none; padding: 15px 30px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border: none; cursor: pointer; transition: 0.2s; margin-top: 15px; }
         .btn-gold:hover { background-color: var(--brand-gold); }
 
+        /* Universal Section Styling */
+        .universal-section { text-align: center; margin-top: 40px; }
+        .section-label { font-size: 0.8em; color: #888; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+        .icon-grid { display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; }
+        .icon-item { flex: 1; min-width: 120px; display: flex; flex-direction: column; align-items: center; color: var(--brand-gold); }
+        .icon-item svg { width: 40px; height: 40px; margin-bottom: 10px; opacity: 0.8; }
+        .icon-item span { font-size: 0.85em; color: var(--text-main); font-weight: bold; text-transform: uppercase; }
+
         /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 768px) {
             .hamburger { display: flex; }
@@ -88,10 +96,34 @@
     </div>
 
     <div class="card">
-        <h2>THE DIGITAL MAINTENANCE VAULT</h2>
+        <h2>THE UNIVERSAL MAINTENANCE VAULT</h2>
         <p>
-            Stop tracking your heavy equipment on a greasy whiteboard. Maintenance Vault is built for the guys on the ground. It provides real-time fleet tracking for every oil change, filter replacement, and routine inspection across your entire heavy equipment lineup. No more guessing when the skid steer was last serviced. No more blowing engines over missed maintenance windows. Log the hours, track the parts, and keep the iron moving. Built tough, built lean, and built for the trades.
+            Stop managing your critical assets with greasy whiteboards, clunky non-integrated calendars, or that ratty notebook you can never find a pen for. Maintenance Vault is the rugged, centralized hub for anything that requires routine care. From heavy equipment and fleet trucks to HVAC systems, aquarium filtration, and household machinery—if it has a filter, a battery, or a recurring service window, track it here. Don’t know Excel? No problem. Log the hours, archive the parts lists, and never miss a maintenance window again. Whether you’re protecting a million-dollar fleet or a high-performance home system, keep your iron—and your life—moving.
         </p>
+
+        <div class="universal-section">
+            <p class="section-label">One Vault. Every Asset.</p>
+            <div class="icon-grid">
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM17 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM19 13h-4.5V9H17l2 4z"/>
+                    </svg>
+                    <span>Fleet/Equipment</span>
+                </div>
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                    </svg>
+                    <span>HVAC/Home Systems</span>
+                </div>
+                <div class="icon-item">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.07-.47 0-.59.22L3.09 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.07.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+                    </svg>
+                    <span>General Machinery/Tools</span>
+                </div>
+            </div>
+        </div>
 
         <div id="waitlist-container" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px;">
             <h3 style="color: var(--brand-gold); text-transform: uppercase; margin-bottom: 20px;">Join the Waitlist</h3>
