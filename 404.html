@@ -7,29 +7,37 @@
     <style>
         :root {
             --bg-main:  #263E5C;
+            --bg-sections: #111111;
             --text-main: #d1d1d1;
             --brand-gold: #D4AF37;
             --brand-action: #FF8C00;
             --border-color: #333333;
         }
 
-        body { 
-            font-family: 'Courier New', Courier, monospace; 
-            margin: 0; 
-            padding: 0; 
-            background-color: var(--bg-main); 
-            color: var(--text-main); 
+        body { font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; }
+
+        /* --- NAVIGATION BAR --- */
+        .top-nav { background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .nav-brand { color: var(--brand-gold); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 1.2em; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: var(--text-main); text-decoration: none; text-transform: uppercase; font-weight: bold; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--brand-action); }
+        .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 5px; }
+        .hamburger span { display: block; width: 25px; height: 3px; background-color: var(--brand-gold); transition: 0.3s; }
+
+        .error-page-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: calc(100vh - 160px);
             text-align: center;
+            padding: 20px;
         }
 
         .error-container {
             max-width: 600px;
             padding: 40px;
-            background: #111111;
+            background: var(--bg-sections);
             border: 2px solid var(--brand-gold);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
@@ -67,16 +75,48 @@
         .btn-home:hover {
             background: var(--brand-gold);
         }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 0; text-align: center; }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 15px; border-bottom: 1px solid var(--border-color); width: 100%; box-sizing: border-box; }
+            .nav-links a:last-child { border-bottom: none; }
+        }
     </style>
 </head>
 <body>
 
+<nav class="top-nav">
+    <div class="nav-brand">DONKEY JAW SERVICES</div>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+        <a href="./index.html">HOME</a>
+        <a href="./maintenancevault.html">MAINTENANCE VAULT</a>
+        <a href="./support.html">SUPPORT THE BUILD</a>
+    </div>
+</nav>
+
+<div class="error-page-wrapper">
     <div class="error-container">
         <h1>404</h1>
         <h2>WRONG TURN.</h2>
         <p>The tool you're looking for isn't in the chest. Either the link is broken or the project is still on the workbench.</p>
-        <a href="https://donkeyjawservices.com" class="btn-home">Back to the Shop</a>
+        <a href="./index.html" class="btn-home">Back to the Shop</a>
     </div>
+</div>
+
+<script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburgerBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
