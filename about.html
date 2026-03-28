@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Donkey Jaw Services</title>
-    <link rel="icon" type="image/jpg" href="logo.jpg">
+     <link rel="icon" type="image/jpg" href="logo.jpg">
     <link rel="apple-touch-icon" href="logo.jpg">
     <style>
         /* === COLOR CONTROL PANEL === */
@@ -17,18 +17,8 @@
             --border-color: #333333;  /* Lines and borders */
         }
 
-        body {
-            font-family: 'Courier New', Courier, monospace;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
+        body { font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; }
+        
         /* --- NAVIGATION BAR --- */
         .top-nav {
             background-color: #000;
@@ -41,7 +31,7 @@
             top: 0;
             z-index: 1000;
         }
-
+        
         .nav-brand {
             color: var(--brand-gold);
             font-weight: bold;
@@ -49,12 +39,12 @@
             text-transform: uppercase;
             font-size: 1.2em;
         }
-
+        
         .nav-links {
             display: flex;
             gap: 20px;
         }
-
+        
         .nav-links a {
             color: var(--text-main);
             text-decoration: none;
@@ -62,7 +52,7 @@
             font-weight: bold;
             transition: color 0.2s;
         }
-
+        
         .nav-links a:hover {
             color: var(--brand-action);
         }
@@ -77,7 +67,7 @@
             gap: 5px;
             padding: 5px;
         }
-
+        
         .hamburger span {
             display: block;
             width: 25px;
@@ -86,50 +76,33 @@
             transition: 0.3s;
         }
 
-        /* --- SPLASH CONTENT --- */
-        .splash-wrapper {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            text-align: center;
-        }
+        /* The Header */
+        header { background: #000; padding: 80px 20px; text-align: center; border-bottom: 4px solid var(--brand-gold); }
+        h1 { color: var(--brand-gold); font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: 5px; }
+        .tagline { color: var(--brand-action); font-weight: bold; text-transform: uppercase; margin-top: 15px; font-size: 1em; letter-spacing: 1px; }
 
-        .splash-content {
-            max-width: 800px;
-        }
+        section { max-width: 950px; margin: auto; padding: 60px 20px; }
+        
+        /* Typography */
+        h2 { color: var(--brand-gold); text-transform: uppercase; font-size: 1.8em; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 0; }
+        .story-text p { font-size: 1.15em; line-height: 1.8; text-align: justify; margin-bottom: 25px; }
+        .highlight { color: var(--brand-action); font-weight: bold; }
 
-        .splash-logo {
-            height: 220px;
-            margin-bottom: 30px;
-            border-radius: 50%;
-            border: 3px solid var(--brand-gold);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
-        }
+        /* The Scripture Box */
+        .scripture-box { text-align: center; margin-bottom: 50px; padding: 30px; border: 1px inset var(--border-color); background: var(--bg-sections); }
+        .scripture-text { font-style: italic; color: var(--brand-gold); font-size: 1.1em; margin: 0; }
+        .scripture-ref { text-align: right; color: var(--brand-action); font-weight: bold; margin-top: 15px; font-size: 0.9em; letter-spacing: 1px; }
 
-        .splash-title {
-            color: var(--brand-gold);
-            font-size: 3em;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            line-height: 1.2;
-        }
-
-        .splash-tagline {
-            color: #888;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-top: 20px;
-            font-size: 1.1em;
-            letter-spacing: 2px;
-        }
+        /* App Cards */
+        .deployment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
+        .card { background: var(--bg-sections); border: 1px solid var(--border-color); padding: 30px; position: relative; border-left: 4px solid var(--brand-gold); }
+        .card:hover { border-color: var(--brand-action); }
+        .card h3 { color: #fff; margin-top: 0; text-transform: uppercase; }
+        .status-badge { position: absolute; top: -10px; right: 10px; background: var(--brand-action); color: #000; font-size: 0.7em; padding: 3px 10px; font-weight: bold; }
 
         /* --- MOBILE RESPONSIVENESS --- */
-        @media (max-width: 768px) {
-            .splash-title { font-size: 2em; }
-            .splash-logo { height: 180px; }
+        @media (max-width: 768px) { 
+            .deployment-grid { grid-template-columns: 1fr; }
             .hamburger { display: flex; }
             .nav-links {
                 display: none;
@@ -185,7 +158,6 @@
             color: #888888;
             border-top: 2px solid var(--brand-gold);
             background-color: #000;
-            margin-top: auto;
         }
     </style>
 </head>
@@ -198,38 +170,73 @@
     </button>
     <div class="nav-links" id="nav-links">
         <a href="/">HOME</a>
-        <a href="/services">SERVICES</a>
+        <a href="/about">ABOUT</a>
         <a href="/truemule">TRUEMULE</a>
         <a href="/maintenancevault">MAINTENANCE VAULT</a>
         <a href="/support">SUPPORT THE BUILD</a>
-        <a href="/about">ABOUT</a>
     </div>
 </nav>
 
-<main class="splash-wrapper">
-    <div class="splash-content">
-        <img src="logo.jpg" alt="Donkey Jaw Services Logo" class="splash-logo">
-        <h1 class="splash-title">DONKEY JAW SERVICES</h1>
-        <p class="splash-tagline">RUSTED AND FORGOTTEN, BUT THE FIRST TOOL YOU REACH FOR.</p>
+<header>
+    <img src="logo.jpg" alt="Donkey Jaw Services Logo" style="height: 220px; margin-bottom: 20px; border-radius: 50%; border: 2px solid var(--brand-gold);">
+
+    <h1>DONKEY JAW SERVICES</h1>
+    <p class="tagline">Rusted and forgotten, but the first tool you reach for.</p>
+</header>
+
+<section>
+    <div class="scripture-box">
+        <p class="scripture-text">
+            "And he found a new jawbone of an ass, and put forth his hand, and took it, and slew a thousand men therewith. And Samson said, With the jawbone of an ass, heaps upon heaps, with the jaw of an ass have I slain a thousand men."
+        </p>
+        <p class="scripture-ref">— JUDGES 15:15-16</p>
     </div>
-</main>
+
+    <h2>The Foundation</h2>
+    <div class="story-text">
+        <p>I wasn’t raised in a shop, but I was raised with the patience of a woodsman. Growing up in the city, the outdoors was something I had to work for. I’ve been a fisherman since I could walk and a hunter since I was 14—finding my own way to the field even when the barriers were high. Raised by a single mother, who was raised by a single mother with strong ties to the church, <span class="highlight">I learned early that if you want the results, you put in the time.</span></p>
+
+        <p>I wanted to feel the demands and experience the heavy-lifting of the oilfield; that drive led me to the high-pressure environment of <strong>Water Transfers</strong>. When the world shifted during the COVID exit, I pivoted and took those industrial skills to the <strong>Sand Mine</strong> as a general laborer because that’s where the work was. I wasn't just there for a paycheck; I was there to learn how the systems ran—and why they so often failed the people using them.</p>
+
+        <p>The name <strong>Donkey Jaw Services</strong> comes from the old story of Samson, who used a discarded tool to win a fight no one thought he could. Most people overlook the "donkey"—an animal known for quiet endurance and carrying the heavy load. I build the tools that share that same DNA. I’m not here to reinvent the wheel; I’m here to give the trades a <span class="highlight">practical advantage</span> that makes the "old way" of doing things obsolete.</p>
+        
+        <p>I eventually found myself outside the walls of the "status quo" because I wouldn't stop pointing out the inefficiencies. Now, I use that same persistence to build digital infrastructure that works as hard as the crew on the ground.</p>
+        
+        <p style="color: var(--brand-gold); font-weight: bold; font-size: 1.3em; margin-top: 40px; border-left: 3px solid var(--brand-action); padding-left: 15px; letter-spacing: 1px;">
+            TRISTEN PATTON<br>
+            <span style="font-size: 0.7em; color: var(--text-main); letter-spacing: 2px;">FOUNDER & OPERATOR</span>
+        </p>
+    </div>
+</section>
+
+<section style="background-color: var(--bg-main);">
+    <h2>Proprietary Tools</h2>
+    <div class="deployment-grid">
+        <div class="card">
+            <div class="status-badge">BETA</div>
+            <h3>TrueMule Calculator</h3>
+            <p>A high-speed auction calculator built for salvage and estate recovery. It handles the buyer's premium and the hidden logistics math on the fly so you can bid with absolute certainty.</p>
+        </div>
+        <div class="card">
+            <div class="status-badge">IN DEV</div>
+            <h3>MaintenanceVault</h3>
+            <p>The digital maintenance vault. Real-time fleet tracking for every oil change, filter replacement, and routine inspection across your entire heavy equipment lineup.</p>
+        </div>
+    </div>
+</section>
 
 <footer>
     <div style="margin-bottom: 10px;">&copy; 2026 Donkey Jaw Services LLC. All Rights Reserved.</div>
     <div class="footer-socials">
-        <!-- LinkedIn -->
         <a href="https://www.linkedin.com/in/tristen-patton-8b91853b5" target="_blank" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
         </a>
-        <!-- X (Twitter) -->
         <a href="https://x.com/DonkeyJawDev" target="_blank" aria-label="X (Twitter)">
             <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
         </a>
-        <!-- Facebook -->
         <a href="https://www.facebook.com/profile.php?id=61577482921655" target="_blank" aria-label="Facebook">
             <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
         </a>
-        <!-- Reddit -->
         <a href="https://www.reddit.com/user/DonkeyJawServices/" target="_blank" aria-label="Reddit">
             <svg viewBox="0 0 24 24"><path d="M22 11.5c0-1.38-1.12-2.5-2.5-2.5-.32 0-.62.06-.9.17C17.26 7.78 15.36 7 13.5 7l.8-3.5 2.7.6c.1.7.7 1.2 1.4 1.2a1.5 1.5 0 1 0-1.5-1.5c0 .1 0 .2.1.3l-3.1-.7c-.2 0-.3.1-.4.3l-1 4.3C11.04 8.04 9.11 8.84 7.5 10.1c-.28-.11-.58-.17-.9-.17-1.38 0-2.5 1.12-2.5 2.5 0 .9.48 1.68 1.2 2.12-.01.12-.02.24-.02.38 0 2.48 3.02 4.5 6.75 4.5s6.75-2.02 6.75-4.5c0-.14-.01-.26-.02-.38.72-.44 1.2-1.22 1.2-2.12zM7 13.5a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm10 4c-1.1 1.2-3.2 1.3-4 1.3s-2.9-.1-4-1.3c-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0 .9 1 2.8 1.1 3.6 1.1s2.7-.1 3.6-1.1c.1-.1.3-.1.4 0 .1.1.1.3 0 .4zm-.5-3a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
         </a>
