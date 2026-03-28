@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Pledge | Donkey Jaw Services</title>
+     <link rel="icon" type="image/jpg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    <style>
+        /* === COLOR CONTROL PANEL === */
+        :root {
+            --bg-main:  #263E5C;       /* Main website background */
+            --bg-sections: #111111;   /* Background for the cards and form */
+            --text-main: #d1d1d1;     /* Main paragraph text */
+            --brand-gold: #D4AF37;    /* The Donkey Jaw Gold */
+            --brand-action: #FF8C00;  /* The Orange */
+            --border-color: #333333;  /* Lines and borders */
+        }
+
+        body { font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh;}
+        
+        /* --- NAVIGATION BAR --- */
+        .top-nav {
+            background-color: #000;
+            border-bottom: 2px solid var(--brand-gold);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-brand { color: var(--brand-gold); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 1.2em; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: var(--text-main); text-decoration: none; text-transform: uppercase; font-weight: bold; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--brand-action); }
+
+        /* --- HAMBURGER ICON --- */
+        .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 5px; }
+        .hamburger span { display: block; width: 25px; height: 3px; background-color: var(--brand-gold); transition: 0.3s; }
+
+        /* --- HEADER & CONTENT --- */
+        header { background: #000; padding: 60px 20px; text-align: center; border-bottom: 4px solid var(--brand-action); }
+        h1 { color: var(--brand-gold); font-size: 2.5em; margin: 0; text-transform: uppercase; letter-spacing: 3px; }
+        .tagline { color: var(--text-main); font-weight: bold; text-transform: uppercase; margin-top: 10px; font-size: 1.1em; letter-spacing: 1px; }
+
+        section { max-width: 800px; margin: auto; padding: 60px 20px; flex-grow: 1; }
+        .story-text p { font-size: 1.15em; line-height: 1.8; text-align: justify; margin-bottom: 25px; }
+        .highlight { color: var(--brand-action); font-weight: bold; }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 768px) { 
+            .hamburger { display: flex; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 0; text-align: center; }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 15px; border-bottom: 1px solid var(--border-color); width: 100%; box-sizing: border-box; }
+            .nav-links a:last-child { border-bottom: none; }
+        }
+
+        /* --- FOOTER SOCIALS --- */
+        .footer-socials { display: flex; justify-content: center; gap: 25px; margin-top: 20px; }
+        .footer-socials a { color: var(--text-main); transition: color 0.2s; display: flex; align-items: center; }
+        .footer-socials a:hover { color: var(--brand-gold); }
+        .footer-socials svg { width: 24px; height: 24px; fill: currentColor; }
+        footer { text-align: center; padding: 40px; font-size: 0.9em; color: #888888; border-top: 2px solid var(--brand-gold); background-color: #000; margin-top: auto;}
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="nav-brand">DONKEY JAW SERVICES</div>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+        <a href="/">HOME</a>
+        <a href="/about">ABOUT</a>
+        <a href="/pledge">PLEDGE</a>
+        <a href="/truemule">TRUEMULE</a>
+        <a href="/maintenancevault">MAINTENANCE VAULT</a>
+        <a href="/support">SUPPORT THE BUILD</a>
+    </div>
+</nav>
+
+<header>
+    <h1>ENVIRONMENTAL PLEDGE</h1>
+    <p class="tagline">Curing the modern throwaway culture.</p>
+</header>
+
+<section>
+    <div class="story-text">
+        <p>At Donkey Jaw Services, we recognize that deferred maintenance is a massive contributor to environmental damage. When people fail to maintain their vehicles, HVAC systems, and heavy equipment, it directly leads to premature landfill waste, toxic fluid leaks, and skyrocketing carbon emissions from inefficient engines.</p>
+
+        <p>Our flagship app, <strong>Maintenance Vault</strong>, is built to address a deeply personal and globally critical problem: the paralyzing anxiety of climate change combined with this everyday deferred maintenance. We want to give everyday people a tangible, accessible way to fight climate anxiety by extending the lifecycle of their property and reducing their personal carbon footprint.</p>
+
+        <p>The app acts as a comprehensive digital tracking system that goes beyond simple calendar reminders by integrating an <span class="highlight">"environmental rating"</span> for our users. For example, changing a vehicle or HVAC filter on time isn't just a chore—it optimizes energy consumption and reduces emissions.</p>
+
+        <p>We are converting the climate anxiety that so many of us feel into <span class="highlight">localized, measurable action</span>. By empowering our users to properly maintain their assets, we are building a community that actively prevents premature equipment disposal and lowers emissions, one routine check at a time.</p>
+    </div>
+</section>
+
+<footer>
+    <div style="margin-bottom: 10px;">&copy; 2026 Donkey Jaw Services LLC. All Rights Reserved.</div>
+    <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/tristen-patton-8b91853b5" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a href="https://x.com/DonkeyJawDev" target="_blank" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61577482921655" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+        </a>
+    </div>
+</footer>
+
+<script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinks = document.getElementById('nav-links');
+    hamburgerBtn.addEventListener('click', function() { navLinks.classList.toggle('active'); });
+</script>
+
+</body>
+</html>
