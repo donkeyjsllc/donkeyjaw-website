@@ -3,85 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tool Not Found | Donkey Jaw Services</title>
+    <title>About | Donkey Jaw Services</title>
+    <link rel="icon" type="image/jpg" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
     <style>
+        /* === COLOR CONTROL PANEL === */
         :root {
-            --bg-main:  #263E5C;
-            --bg-sections: #111111;
-            --text-main: #d1d1d1;
-            --brand-gold: #D4AF37;
-            --brand-action: #FF8C00;
-            --border-color: #333333;
+            --bg-main:  #263E5C;       /* Main website background */
+            --bg-sections: #111111;   /* Background for the cards and form */
+            --text-main: #d1d1d1;     /* Main paragraph text */
+            --brand-gold: #D4AF37;    /* The Donkey Jaw Gold */
+            --brand-action: #FF8C00;  /* The Orange */
+            --border-color: #333333;  /* Lines and borders */
         }
 
-        body { font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
         /* --- NAVIGATION BAR --- */
-        .top-nav { background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .nav-brand { color: var(--brand-gold); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 1.2em; }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a { color: var(--text-main); text-decoration: none; text-transform: uppercase; font-weight: bold; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--brand-action); }
-        .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 5px; }
-        .hamburger span { display: block; width: 25px; height: 3px; background-color: var(--brand-gold); transition: 0.3s; }
+        .top-nav {
+            background-color: #000;
+            border-bottom: 2px solid var(--brand-gold);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-        .error-page-wrapper {
+        .nav-brand {
+            color: var(--brand-gold);
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 1.2em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-main);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--brand-action);
+        }
+
+        /* --- HAMBURGER ICON --- */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            flex-direction: column;
+            gap: 5px;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--brand-gold);
+            transition: 0.3s;
+        }
+
+        /* --- SPLASH CONTENT --- */
+        .splash-wrapper {
+            flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: calc(100vh - 160px);
+            padding: 40px 20px;
             text-align: center;
-            padding: 20px;
         }
 
-        .error-container {
-            max-width: 600px;
-            padding: 40px;
-            background: var(--bg-sections);
-            border: 2px solid var(--brand-gold);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        .splash-content {
+            max-width: 800px;
         }
 
-        h1 { 
-            color: var(--brand-gold); 
-            font-size: 5em; 
-            margin: 0; 
+        .splash-logo {
+            height: 220px;
+            margin-bottom: 30px;
+            border-radius: 50%;
+            border: 3px solid var(--brand-gold);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
         }
 
-        h2 { 
-            text-transform: uppercase; 
-            letter-spacing: 3px; 
-            margin-bottom: 20px;
+        .splash-title {
+            color: var(--brand-gold);
+            font-size: 3em;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: 1.2;
         }
 
-        p { 
-            font-size: 1.1em; 
-            margin-bottom: 30px; 
+        .splash-tagline {
             color: #888;
-        }
-
-        .btn-home {
-            display: inline-block;
-            background: var(--brand-action);
-            color: #000;
-            text-decoration: none;
-            padding: 15px 30px;
             font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.2s;
-        }
-
-        .btn-home:hover {
-            background: var(--brand-gold);
+            margin-top: 20px;
+            font-size: 1.1em;
+            letter-spacing: 2px;
         }
 
         /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 768px) {
+            .splash-title { font-size: 2em; }
+            .splash-logo { height: 180px; }
             .hamburger { display: flex; }
-            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 0; text-align: center; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #000;
+                border-bottom: 2px solid var(--brand-gold);
+                padding: 0;
+                text-align: center;
+            }
             .nav-links.active { display: flex; }
-            .nav-links a { padding: 15px; border-bottom: 1px solid var(--border-color); width: 100%; box-sizing: border-box; }
+            .nav-links a {
+                padding: 15px;
+                border-bottom: 1px solid var(--border-color);
+                width: 100%;
+                box-sizing: border-box;
+            }
             .nav-links a:last-child { border-bottom: none; }
         }
 
@@ -117,6 +185,7 @@
             color: #888888;
             border-top: 2px solid var(--brand-gold);
             background-color: #000;
+            margin-top: auto;
         }
     </style>
 </head>
@@ -136,14 +205,13 @@
     </div>
 </nav>
 
-<div class="error-page-wrapper">
-    <div class="error-container">
-        <h1>404</h1>
-        <h2>WRONG TURN.</h2>
-        <p>The tool you're looking for isn't in the chest. Either the link is broken or the project is still on the workbench.</p>
-        <a href="/" class="btn-home">Back to the Shop</a>
+<main class="splash-wrapper">
+    <div class="splash-content">
+        <img src="logo.jpg" alt="Donkey Jaw Services Logo" class="splash-logo">
+        <h1 class="splash-title">DONKEY JAW SERVICES</h1>
+        <p class="splash-tagline">RUSTED AND FORGOTTEN, BUT THE FIRST TOOL YOU REACH FOR.</p>
     </div>
-</div>
+</main>
 
 <footer>
     <div style="margin-bottom: 10px;">&copy; 2026 Donkey Jaw Services LLC. All Rights Reserved.</div>
