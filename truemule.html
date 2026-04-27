@@ -8,7 +8,6 @@
     <link rel="icon" type="image/jpg" href="logo.jpg">
     <link rel="apple-touch-icon" href="logo.jpg">
     <style>
-        /* === COLOR CONTROL PANEL === */
         :root {
             --bg-main:  #263E5C;
             --bg-sections: #111111;
@@ -22,39 +21,35 @@
 
         /* --- NAVIGATION BAR --- */
         .top-nav { background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        
-        .nav-brand {
-            color: var(--brand-gold);
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 1.2em;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
+        .nav-brand { color: var(--brand-gold); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 1.2em; text-decoration: none; transition: color 0.2s; }
         .nav-brand:hover { color: var(--brand-action); }
-
         .nav-links { display: flex; gap: 20px; }
-        
         .nav-links a { color: var(--text-main); text-decoration: none; text-transform: uppercase; font-weight: bold; transition: color 0.2s; }
         .nav-links a:hover { color: var(--brand-action); }
-
         .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 5px; }
         .hamburger span { display: block; width: 25px; height: 3px; background-color: var(--brand-gold); transition: 0.3s; }
 
         /* The Header */
         header { background: #000; padding: 60px 20px; text-align: center; border-bottom: 4px solid var(--brand-gold); }
         h1 { color: var(--brand-gold); font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: 5px; }
+        .tagline { color: var(--brand-action); font-weight: bold; text-transform: uppercase; margin-top: 15px; font-size: 1.2em; letter-spacing: 1px; }
 
         section { max-width: 850px; margin: auto; padding: 60px 20px; }
         h2 { color: var(--brand-gold); text-transform: uppercase; font-size: 1.8em; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 0; }
 
-        /* The Card Layout */
         .card { background: var(--bg-sections); border: 1px solid var(--border-color); padding: 40px; margin-bottom: 40px; border-left: 4px solid var(--brand-gold); }
         .card p { font-size: 1.15em; line-height: 1.8; text-align: justify; margin-bottom: 25px; }
 
-        /* Buttons */
+        /* App Showcase */
+        .app-showcase { border: 1px solid var(--border-color); border-radius: 6px; overflow: hidden; margin: 30px 0; background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .app-showcase img { width: 100%; height: auto; display: block; }
+
+        /* How it works */
+        .steps-container { background: var(--bg-main); padding: 30px; border: 1px solid var(--border-color); margin: 30px 0; }
+        .step-item { margin-bottom: 20px; }
+        .step-item:last-child { margin-bottom: 0; }
+        .step-number { color: var(--brand-action); font-weight: bold; font-size: 1.2em; margin-right: 10px; }
+
         .btn-gold { display: inline-block; background-color: var(--brand-action); color: #000; text-decoration: none; padding: 15px 30px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border: none; cursor: pointer; transition: 0.2s; margin-top: 15px; }
         .btn-gold:hover { background-color: var(--brand-gold); }
 
@@ -94,27 +89,45 @@
 </nav>
 
 <header>
-    <div style="text-align: center; margin-bottom: 20px;">
-        <img src="TRUEMULE_LOGO.jpg" alt="TrueMule Logo" style="max-width: 100%; height: auto; border-radius: 8px; border: 2px solid var(--brand-gold); max-height: 250px;">
-    </div>
-    <h1>THE TRUEMULE AUCTION CALCULATOR</h1>
+    <h1>THE TRUEMULE CALCULATOR</h1>
+    <p class="tagline">High-Speed Auction Math</p>
 </header>
 
 <section>
     <div class="card">
-        <h2>THE TRUEMULE AUCTION CALCULATOR</h2>
         <p>
-            Stop guessing at the auction block. The TrueMule Calculator is built for estate liquidators and equipment buyers who need to find the real margin in seconds. Calculate premiums, tax, hauling costs, and repair overhead on the fly so you know exactly what your 'walk-away' number is before the gavel drops. Don't overpay for iron—run it through the Mule.
+            Stop guessing at the auction block. The TrueMule Calculator is built for estate liquidators and equipment buyers who need to find their real margin in seconds. Don't let buyer's premiums, taxes, and hidden overhead turn a good deal into a bad investment. Run it through the Mule and know your walk-away price before the gavel drops.
         </p>
 
-        <div id="waitlist-container" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px;">
-            <h3 style="color: var(--brand-gold); text-transform: uppercase; margin-bottom: 20px;">Join the Waitlist</h3>
-            <form id="waitlist-form">
+        <div class="app-showcase">
+            <img src="tm-preview.jpg" alt="TrueMule Calculator Interface showing max bid and total cost">
+        </div>
+
+        <h2>How It Works</h2>
+        <div class="steps-container">
+            <div class="step-item">
+                <span class="step-number">01.</span> Set your absolute maximum out-the-door budget.
+            </div>
+            <div class="step-item">
+                <span class="step-number">02.</span> Punch in the auction house's Buyer's Premium percentage and local Sales Tax.
+            </div>
+            <div class="step-item">
+                <span class="step-number">03.</span> Add your flat-rate overhead (logistics, hauling costs, anticipated repairs).
+            </div>
+            <div class="step-item">
+                <span class="step-number">04.</span> <strong style="color: #fff;">Get your real limit.</strong> TrueMule instantly reverse-engineers the math to tell you exactly when to stop bidding.
+            </div>
+        </div>
+
+        <div id="waitlist-container" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px; text-align: center;">
+            <h3 style="color: var(--brand-gold); text-transform: uppercase; margin-bottom: 5px;">Join the Beta</h3>
+            <p style="font-size: 0.9em; color: #888; text-align: center; margin-bottom: 20px;">Launching Fall 2026</p>
+            <form id="waitlist-form" style="max-width: 500px; margin: auto;">
                 <input type="email" id="email" placeholder="Enter your email" required style="width: 100%; background: var(--bg-main); border: 1px solid var(--border-color); color: var(--text-main); padding: 15px; box-sizing: border-box; font-family: inherit; margin-bottom: 20px;">
                 <button type="submit" class="btn-gold" style="width: 100%; margin-top: 0;">Secure My Spot</button>
             </form>
-            <div id="success-message" style="display: none; text-align: center; padding: 20px; background-color: rgba(212, 175, 55, 0.1); border: 1px solid var(--brand-gold);">
-                <p style="color: var(--brand-gold); font-weight: bold; margin: 0;">You're on the list. We'll let you know when the Mule is ready to work.</p>
+            <div id="success-message" style="display: none; text-align: center; padding: 20px; background-color: rgba(212, 175, 55, 0.1); border: 1px solid var(--brand-gold); max-width: 500px; margin: auto;">
+                <p style="color: var(--brand-gold); font-weight: bold; margin: 0; text-align: center;">You're on the list. We'll let you know when the Mule is ready to work.</p>
             </div>
         </div>
     </div>
@@ -135,9 +148,6 @@
         </a>
         <a href="https://www.facebook.com/profile.php?id=61577482921655" target="_blank" aria-label="Facebook">
             <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
-        </a>
-        <a href="https://www.reddit.com/user/DonkeyJawServices/" target="_blank" aria-label="Reddit">
-            <svg viewBox="0 0 24 24"><path d="M22 11.5c0-1.38-1.12-2.5-2.5-2.5-.32 0-.62.06-.9.17C17.26 7.78 15.36 7 13.5 7l.8-3.5 2.7.6c.1.7.7 1.2 1.4 1.2a1.5 1.5 0 1 0-1.5-1.5c0 .1 0 .2.1.3l-3.1-.7c-.2 0-.3.1-.4.3l-1 4.3C11.04 8.04 9.11 8.84 7.5 10.1c-.28-.11-.58-.17-.9-.17-1.38 0-2.5 1.12-2.5 2.5 0 .9.48 1.68 1.2 2.12-.01.12-.02.24-.02.38 0 2.48 3.02 4.5 6.75 4.5s6.75-2.02 6.75-4.5c0-.14-.01-.26-.02-.38.72-.44 1.2-1.22 1.2-2.12zM7 13.5a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm10 4c-1.1 1.2-3.2 1.3-4 1.3s-2.9-.1-4-1.3c-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0 .9 1 2.8 1.1 3.6 1.1s2.7-.1 3.6-1.1c.1-.1.3-.1.4 0 .1.1.1.3 0 .4zm-.5-3a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
         </a>
     </div>
 </footer>
