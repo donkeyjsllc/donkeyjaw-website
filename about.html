@@ -4,33 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Donkey Jaw Services</title>
-     <link rel="icon" type="image/jpg" href="logo.jpg">
+    <meta name="description" content="Learn the story behind Donkey Jaw Services. Built from the ground up to give the trades a practical, digital advantage.">
+    <link rel="icon" type="image/jpg" href="logo.jpg">
     <link rel="apple-touch-icon" href="logo.jpg">
     <style>
         /* === COLOR CONTROL PANEL === */
         :root {
-            --bg-main:  #263E5C;       /* Main website background */
-            --bg-sections: #111111;   /* Background for the cards and form */
-            --text-main: #d1d1d1;     /* Main paragraph text */
-            --brand-gold: #D4AF37;    /* The Donkey Jaw Gold */
-            --brand-action: #FF8C00;  /* The Orange */
-            --border-color: #333333;  /* Lines and borders */
+            --bg-main:  #263E5C;
+            --bg-sections: #111111;
+            --text-main: #d1d1d1;
+            --brand-gold: #D4AF37;
+            --brand-action: #FF8C00;
+            --border-color: #333333;
         }
 
         body { font-family: 'Courier New', Courier, monospace; margin: 0; padding: 0; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; }
         
         /* --- NAVIGATION BAR --- */
-        .top-nav {
-            background-color: #000;
-            border-bottom: 2px solid var(--brand-gold);
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+        .top-nav { background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
         
         .nav-brand {
             color: var(--brand-gold);
@@ -38,43 +29,19 @@
             letter-spacing: 2px;
             text-transform: uppercase;
             font-size: 1.2em;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .nav-links a {
-            color: var(--text-main);
             text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
             transition: color 0.2s;
         }
-        
-        .nav-links a:hover {
-            color: var(--brand-action);
-        }
 
-        /* --- HAMBURGER ICON --- */
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            cursor: pointer;
-            flex-direction: column;
-            gap: 5px;
-            padding: 5px;
-        }
+        .nav-brand:hover { color: var(--brand-action); }
+
+        .nav-links { display: flex; gap: 20px; }
         
-        .hamburger span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background-color: var(--brand-gold);
-            transition: 0.3s;
-        }
+        .nav-links a { color: var(--text-main); text-decoration: none; text-transform: uppercase; font-weight: bold; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--brand-action); }
+
+        .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 5px; }
+        .hamburger span { display: block; width: 25px; height: 3px; background-color: var(--brand-gold); transition: 0.3s; }
 
         /* The Header */
         header { background: #000; padding: 80px 20px; text-align: center; border-bottom: 4px solid var(--brand-gold); }
@@ -93,85 +60,34 @@
         .scripture-text { font-style: italic; color: var(--brand-gold); font-size: 1.1em; margin: 0; }
         .scripture-ref { text-align: right; color: var(--brand-action); font-weight: bold; margin-top: 15px; font-size: 0.9em; letter-spacing: 1px; }
 
-        /* App Cards */
-        .deployment-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; }
-        .card { background: var(--bg-sections); border: 1px solid var(--border-color); padding: 30px; position: relative; border-left: 4px solid var(--brand-gold); }
-        .card:hover { border-color: var(--brand-action); }
-        .card h3 { color: #fff; margin-top: 0; text-transform: uppercase; }
-        .status-badge { position: absolute; top: -10px; right: 10px; background: var(--brand-action); color: #000; font-size: 0.7em; padding: 3px 10px; font-weight: bold; }
-
         /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 768px) { 
-            .deployment-grid { grid-template-columns: 1fr; }
             .hamburger { display: flex; }
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #000;
-                border-bottom: 2px solid var(--brand-gold);
-                padding: 0;
-                text-align: center;
-            }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 0; text-align: center; }
             .nav-links.active { display: flex; }
-            .nav-links a {
-                padding: 15px;
-                border-bottom: 1px solid var(--border-color);
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .nav-links a:last-child { border-bottom: none; }
+            .nav-links a { padding: 15px; border-bottom: 1px solid var(--border-color); width: 100%; box-sizing: border-box; }
         }
 
         /* --- FOOTER SOCIALS --- */
-        .footer-socials {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 20px;
-        }
+        .footer-socials { display: flex; justify-content: center; gap: 25px; margin-top: 20px; }
+        .footer-socials a { color: var(--text-main); transition: color 0.2s; display: flex; align-items: center; }
+        .footer-socials a:hover { color: var(--brand-gold); }
+        .footer-socials svg { width: 24px; height: 24px; fill: currentColor; }
 
-        .footer-socials a {
-            color: var(--text-main);
-            transition: color 0.2s;
-            display: flex;
-            align-items: center;
-        }
-
-        .footer-socials a:hover {
-            color: var(--brand-gold);
-        }
-
-        .footer-socials svg {
-            width: 24px;
-            height: 24px;
-            fill: currentColor;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            font-size: 0.9em;
-            color: #888888;
-            border-top: 2px solid var(--brand-gold);
-            background-color: #000;
-        }
+        footer { text-align: center; padding: 40px; font-size: 0.9em; color: #888888; border-top: 2px solid var(--brand-gold); background-color: #000; }
     </style>
 </head>
 <body>
 
 <nav class="top-nav">
-    <div class="nav-brand">DONKEY JAW SERVICES</div>
+    <a href="/" class="nav-brand">DONKEY JAW SERVICES</a>
     <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
         <span></span><span></span><span></span>
     </button>
     <div class="nav-links" id="nav-links">
         <a href="/">HOME</a>
         <a href="/about">ABOUT</a>
-        <a href="/pledge">PLEDGE</a>
+        <a href="/pledge">ENVIRONMENTAL PLEDGE</a>
         <a href="/truemule">TRUEMULE</a>
         <a href="/maintenancevault">MAINTENANCE VAULT</a>
         <a href="/support">SUPPORT THE BUILD</a>
@@ -212,6 +128,10 @@
 
 <footer>
     <div style="margin-bottom: 10px;">&copy; 2026 Donkey Jaw Services LLC. All Rights Reserved.</div>
+    <div style="margin-bottom: 20px; font-size: 0.85em;">
+        <a href="/privacy" style="color: #888; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | 
+        <a href="/terms" style="color: #888; text-decoration: none; margin: 0 10px;">Terms of Service</a>
+    </div>
     <div class="footer-socials">
         <a href="https://www.linkedin.com/in/tristen-patton-8b91853b5" target="_blank" aria-label="LinkedIn">
             <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
