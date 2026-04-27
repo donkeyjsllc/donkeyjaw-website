@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintenance Vault | Universal Asset & Maintenance Tracker</title>
+    <title>Maintenance Vault | Universal Asset Tracker</title>
     <meta name="description" content="Maintenance Vault by Donkey Jaw Services is the universal asset tracker for fleets, HVAC, and heavy machinery. Never miss a maintenance window again.">
     <link rel="icon" type="image/jpg" href="logo.jpg">
     <link rel="apple-touch-icon" href="logo.jpg">
     <style>
-        /* === COLOR CONTROL PANEL === */
         :root {
             --bg-main:  #263E5C;
             --bg-sections: #111111;
@@ -22,54 +21,40 @@
 
         /* --- NAVIGATION BAR --- */
         .top-nav { background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        
-        .nav-brand {
-            color: var(--brand-gold);
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-size: 1.2em;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
+        .nav-brand { color: var(--brand-gold); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 1.2em; text-decoration: none; transition: color 0.2s; }
         .nav-brand:hover { color: var(--brand-action); }
-
         .nav-links { display: flex; gap: 20px; }
-        
         .nav-links a { color: var(--text-main); text-decoration: none; text-transform: uppercase; font-weight: bold; transition: color 0.2s; }
         .nav-links a:hover { color: var(--brand-action); }
-
         .hamburger { display: none; background: none; border: none; cursor: pointer; flex-direction: column; gap: 5px; padding: 5px; }
         .hamburger span { display: block; width: 25px; height: 3px; background-color: var(--brand-gold); transition: 0.3s; }
 
         /* The Header */
         header { background: #000; padding: 60px 20px; text-align: center; border-bottom: 4px solid var(--brand-gold); }
         h1 { color: var(--brand-gold); font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: 5px; }
+        .tagline { color: var(--brand-action); font-weight: bold; text-transform: uppercase; margin-top: 15px; font-size: 1.2em; letter-spacing: 1px; }
 
-        section { max-width: 850px; margin: auto; padding: 60px 20px; }
+        section { max-width: 900px; margin: auto; padding: 60px 20px; }
         h2 { color: var(--brand-gold); text-transform: uppercase; font-size: 1.8em; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 0; }
 
-        /* The Card Layout */
         .card { background: var(--bg-sections); border: 1px solid var(--border-color); padding: 40px; margin-bottom: 40px; border-left: 4px solid var(--brand-gold); }
         .card p { font-size: 1.15em; line-height: 1.8; text-align: justify; margin-bottom: 25px; }
 
-        /* Tip Jar Specifics */
-        .tip-jar-container { text-align: center; padding: 30px; background-color: #1a1a1a; border: 1px dashed var(--brand-gold); margin-top: 30px; }
-        .tip-jar-container h3 { color: var(--brand-gold); text-transform: uppercase; margin-top: 0; margin-bottom: 20px; }
-        .paypal-form-wrap { display: flex; justify-content: center; align-items: center; }
+        /* App Showcase */
+        .app-showcase { border: 1px solid var(--border-color); border-radius: 6px; overflow: hidden; margin: 30px 0; background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .app-showcase img { width: 100%; height: auto; display: block; }
 
-        /* FAQ Layout */
-        .faq-item { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; }
-        .faq-item h3 { color: var(--brand-action); margin-bottom: 10px; font-size: 1.2em; }
-        .faq-item p { margin-top: 0; font-size: 1.05em; text-align: left; }
+        /* Features Grid */
+        .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 40px 0; }
+        .feature-box { background: var(--bg-main); padding: 25px; border: 1px solid var(--border-color); }
+        .feature-box h3 { color: var(--brand-action); margin-top: 0; text-transform: uppercase; letter-spacing: 1px; font-size: 1.1em; }
+        .feature-box p { font-size: 1em; line-height: 1.6; text-align: left; margin-bottom: 0; }
 
-        /* Buttons */
         .btn-gold { display: inline-block; background-color: var(--brand-action); color: #000; text-decoration: none; padding: 15px 30px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; border: none; cursor: pointer; transition: 0.2s; margin-top: 15px; }
         .btn-gold:hover { background-color: var(--brand-gold); }
 
         /* Universal Section Styling */
-        .universal-section { text-align: center; margin-top: 40px; }
+        .universal-section { text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--border-color); }
         .section-label { font-size: 0.8em; color: #888; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
         .icon-grid { display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; }
         .icon-item { flex: 1; min-width: 120px; display: flex; flex-direction: column; align-items: center; color: var(--brand-gold); }
@@ -78,6 +63,7 @@
 
         /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 768px) {
+            .features-grid { grid-template-columns: 1fr; }
             .hamburger { display: flex; }
             .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 0; text-align: center; }
             .nav-links.active { display: flex; }
@@ -112,19 +98,40 @@
 </nav>
 
 <header>
-    <h1>MAINTENANCE VAULT</h1>
+    <h1>ONE VAULT. EVERY ASSET.</h1>
+    <p class="tagline">The Universal Maintenance Tracker</p>
 </header>
 
 <section>
-    <div style="text-align: center; margin-bottom: 40px;">
-        <img src="MAINTENANCEVAULT_LOGO.jpg" alt="Maintenance Vault Logo" style="max-width: 100%; height: auto; border-radius: 8px; border: 2px solid var(--brand-gold); max-height: 300px;">
-    </div>
-
     <div class="card">
-        <h2>THE UNIVERSAL MAINTENANCE VAULT</h2>
         <p>
-            Stop managing your critical assets with greasy whiteboards, clunky non-integrated calendars, or that ratty notebook you can never find a pen for. Maintenance Vault is the rugged, centralized hub for anything that requires routine care. From heavy equipment and fleet trucks to HVAC systems, aquarium filtration, and household machinery—if it has a filter, a battery, or a recurring service window, track it here. Don’t know Excel? No problem. Log the hours, archive the parts lists, and never miss a maintenance window again. Whether you’re protecting a million-dollar fleet or a high-performance home system, keep your iron—and your life—moving.
+            Stop managing your critical assets with greasy whiteboards, clunky non-integrated calendars, or that ratty notebook you can never find a pen for. Maintenance Vault is the rugged, centralized hub for anything that requires routine care. Whether you’re protecting a million-dollar fleet or a high-performance home system, keep your iron—and your life—moving.
         </p>
+
+        <div class="app-showcase">
+            <img src="mv-preview.jpg" alt="Maintenance Vault Interface showing CO2 tracking and asset management">
+        </div>
+
+        <h2>Built For The Grind</h2>
+        
+        <div class="features-grid">
+            <div class="feature-box">
+                <h3>Don't Know Excel? No Problem.</h3>
+                <p>We ditched the complicated spreadsheets. The interface is built to be dead-simple so you can log hours, archive parts lists, and update records in seconds from your phone or truck.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Environmental Rating Integration</h3>
+                <p>Cure throwaway culture through precision care. The Vault tracks your routine maintenance and calculates the localized CO2 avoided by keeping your engines and filters running optimally.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Zero Missed Windows</h3>
+                <p>If it has a filter, a battery, or a recurring service window, track it here. Automated scheduling ensures you never blow past a critical fluid change or inspection date again.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Straightforward Pricing</h3>
+                <p>The core daily-driver tools are built to be accessible for the guys on the ground. Premium fleet-management tiers will be available for heavy-duty commercial operations.</p>
+            </div>
+        </div>
 
         <div class="universal-section">
             <p class="section-label">One Vault. Every Asset.</p>
@@ -133,31 +140,32 @@
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM17 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM19 13h-4.5V9H17l2 4z"/>
                     </svg>
-                    <span>Fleet/Equipment</span>
+                    <span>Fleet & Equipment</span>
                 </div>
                 <div class="icon-item">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
                     </svg>
-                    <span>HVAC/Home Systems</span>
+                    <span>HVAC & Home</span>
                 </div>
                 <div class="icon-item">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.07-.47 0-.59.22L3.09 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.07.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
                     </svg>
-                    <span>General Machinery/Tools</span>
+                    <span>General Machinery</span>
                 </div>
             </div>
         </div>
 
-        <div id="waitlist-container" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px;">
-            <h3 style="color: var(--brand-gold); text-transform: uppercase; margin-bottom: 20px;">Join the Waitlist</h3>
-            <form id="waitlist-form">
+        <div id="waitlist-container" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px; text-align: center;">
+            <h3 style="color: var(--brand-gold); text-transform: uppercase; margin-bottom: 5px;">Join the Beta</h3>
+            <p style="font-size: 0.9em; color: #888; text-align: center; margin-bottom: 20px;">Launching June 2026</p>
+            <form id="waitlist-form" style="max-width: 500px; margin: auto;">
                 <input type="email" id="email" placeholder="Enter your email" required style="width: 100%; background: var(--bg-main); border: 1px solid var(--border-color); color: var(--text-main); padding: 15px; box-sizing: border-box; font-family: inherit; margin-bottom: 20px;">
                 <button type="submit" class="btn-gold" style="width: 100%; margin-top: 0;">Secure My Spot</button>
             </form>
-            <div id="success-message" style="display: none; text-align: center; padding: 20px; background-color: rgba(212, 175, 55, 0.1); border: 1px solid var(--brand-gold);">
-                <p style="color: var(--brand-gold); font-weight: bold; margin: 0;">You're on the list. We'll reach out when the vault opens.</p>
+            <div id="success-message" style="display: none; text-align: center; padding: 20px; background-color: rgba(212, 175, 55, 0.1); border: 1px solid var(--brand-gold); max-width: 500px; margin: auto;">
+                <p style="color: var(--brand-gold); font-weight: bold; margin: 0; text-align: center;">You're on the list. We'll reach out when the vault opens.</p>
             </div>
         </div>
     </div>
@@ -178,9 +186,6 @@
         </a>
         <a href="https://www.facebook.com/profile.php?id=61577482921655" target="_blank" aria-label="Facebook">
             <svg viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3l-.5 3h-2.5v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
-        </a>
-        <a href="https://www.reddit.com/user/DonkeyJawServices/" target="_blank" aria-label="Reddit">
-            <svg viewBox="0 0 24 24"><path d="M22 11.5c0-1.38-1.12-2.5-2.5-2.5-.32 0-.62.06-.9.17C17.26 7.78 15.36 7 13.5 7l.8-3.5 2.7.6c.1.7.7 1.2 1.4 1.2a1.5 1.5 0 1 0-1.5-1.5c0 .1 0 .2.1.3l-3.1-.7c-.2 0-.3.1-.4.3l-1 4.3C11.04 8.04 9.11 8.84 7.5 10.1c-.28-.11-.58-.17-.9-.17-1.38 0-2.5 1.12-2.5 2.5 0 .9.48 1.68 1.2 2.12-.01.12-.02.24-.02.38 0 2.48 3.02 4.5 6.75 4.5s6.75-2.02 6.75-4.5c0-.14-.01-.26-.02-.38.72-.44 1.2-1.22 1.2-2.12zM7 13.5a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm10 4c-1.1 1.2-3.2 1.3-4 1.3s-2.9-.1-4-1.3c-.1-.1-.1-.3 0-.4.1-.1.3-.1.4 0 .9 1 2.8 1.1 3.6 1.1s2.7-.1 3.6-1.1c.1-.1.3-.1.4 0 .1.1.1.3 0 .4zm-.5-3a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
         </a>
     </div>
 </footer>
