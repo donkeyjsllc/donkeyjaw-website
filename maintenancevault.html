@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maintenance Vault | Universal Asset Tracker</title>
-    <meta name="description" content="Maintenance Vault by Donkey Jaw Services is the universal asset tracker for fleets, HVAC, and heavy machinery. Never miss a maintenance window again.">
+    <meta name="description" content="Maintenance Vault by Donkey Jaw Services is the universal asset tracker for everyday vehicles, HVAC, and home systems. Never miss a maintenance window again.">
     <link rel="icon" type="image/jpg" href="logo.jpg">
     <link rel="apple-touch-icon" href="logo.jpg">
     <style>
@@ -34,11 +34,18 @@
         h1 { color: var(--brand-gold); font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: 5px; }
         .tagline { color: var(--brand-action); font-weight: bold; text-transform: uppercase; margin-top: 15px; font-size: 1.2em; letter-spacing: 1px; }
 
+        /* --- PRICING & LAUNCH BLOCK --- */
+        .launch-container { margin-top: 30px; text-align: center; }
+        .pricing-text { font-size: 1.4em; font-weight: bold; color: var(--text-main); margin-bottom: 20px; letter-spacing: 1px; }
+        .pricing-text span { color: var(--brand-gold); font-size: 1.2em; }
+
         section { max-width: 900px; margin: auto; padding: 60px 20px; }
         h2 { color: var(--brand-gold); text-transform: uppercase; font-size: 1.8em; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 0; }
 
         .card { background: var(--bg-sections); border: 1px solid var(--border-color); padding: 40px; margin-bottom: 40px; border-left: 4px solid var(--brand-gold); }
         .card p { font-size: 1.15em; line-height: 1.8; text-align: justify; margin-bottom: 25px; }
+        
+        .consumer-hook { font-size: 1.3em !important; color: var(--brand-action); font-weight: bold; text-align: center !important; margin-bottom: 30px !important; line-height: 1.5 !important; }
 
         /* App Showcase */
         .app-showcase { border: 1px solid var(--border-color); border-radius: 6px; overflow: hidden; margin: 30px 0; background: #000; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
@@ -93,7 +100,7 @@
         <a href="/pledge">ENVIRONMENTAL PLEDGE</a>
         <a href="/web-dev">WEB DEVELOPMENT</a>
         <a href="/truemule">TRUEMULE</a>
-        <a href="/maintenancevault">MAINTENANCE VAULT</a>
+        <a href="https://maintenancevaultapp.com" target="_blank">MAINTENANCE VAULT</a>
         <a href="/support">SUPPORT THE BUILD</a>
     </div>
 </nav>
@@ -101,12 +108,20 @@
 <header>
     <h1>ONE VAULT. EVERY ASSET.</h1>
     <p class="tagline">The Universal Maintenance Tracker</p>
+    
+    <div class="launch-container">
+        <p class="pricing-text"><span>$4.99</span>/mo OR <span>$49.99</span>/yr</p>
+        <a href="https://maintenancevaultapp.com" class="btn-gold" target="_blank" style="font-size: 1.2em; padding: 20px 40px;">Launch Maintenance Vault</a>
+    </div>
 </header>
 
 <section>
     <div class="card">
+        <p class="consumer-hook">
+            Hate trying to remember the last time that HVAC filter was changed? Want an automatic notification so you'll never blow past an oil change again? Click the link above to lock down your assets.
+        </p>
         <p>
-            Stop managing your critical assets with greasy whiteboards, clunky non-integrated calendars, or that ratty notebook you can never find a pen for. Maintenance Vault is the rugged, centralized hub for anything that requires routine care. Whether you’re protecting a million-dollar fleet or a high-performance home system, keep your iron—and your life—moving.
+            Stop managing your personal vehicles, home systems, and weekend gear with clunky calendars or that ratty notebook in the glovebox. Maintenance Vault is the rugged, centralized hub for everyday people who want to protect their investments. Whether you’re tracking a single daily-driver or gearing up for the commercial MVProCom release to manage a fleet, keep your iron—and your life—moving.
         </p>
 
         <div class="app-showcase">
@@ -118,7 +133,7 @@
         <div class="features-grid">
             <div class="feature-box">
                 <h3>Don't Know Excel? No Problem.</h3>
-                <p>We ditched the complicated spreadsheets. The interface is built to be dead-simple so you can log hours, archive parts lists, and update records in seconds from your phone or truck.</p>
+                <p>We ditched the complicated spreadsheets. The interface is built to be dead-simple so you can log hours, archive parts lists, and update records in seconds from your phone or your garage.</p>
             </div>
             <div class="feature-box">
                 <h3>Environmental Rating Integration</h3>
@@ -130,7 +145,7 @@
             </div>
             <div class="feature-box">
                 <h3>Straightforward Pricing</h3>
-                <p>The core daily-driver tools are built to be accessible for the guys on the ground. Premium fleet-management tiers will be available for heavy-duty commercial operations.</p>
+                <p>The core tools are built to be accessible for the everyday consumer. Premium fleet-management tiers (MVProCom) will be available soon for heavy-duty commercial operations.</p>
             </div>
         </div>
 
@@ -141,7 +156,7 @@
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM17 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM19 13h-4.5V9H17l2 4z"/>
                     </svg>
-                    <span>Fleet & Equipment</span>
+                    <span>Personal Vehicles</span>
                 </div>
                 <div class="icon-item">
                     <svg viewBox="0 0 24 24" fill="currentColor">
@@ -155,18 +170,6 @@
                     </svg>
                     <span>General Machinery</span>
                 </div>
-            </div>
-        </div>
-
-        <div id="waitlist-container" style="margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px; text-align: center;">
-            <h3 style="color: var(--brand-gold); text-transform: uppercase; margin-bottom: 5px;">Join the Beta</h3>
-            <p style="font-size: 0.9em; color: #888; text-align: center; margin-bottom: 20px;">Launching June 2026</p>
-            <form id="waitlist-form" style="max-width: 500px; margin: auto;">
-                <input type="email" id="email" placeholder="Enter your email" required style="width: 100%; background: var(--bg-main); border: 1px solid var(--border-color); color: var(--text-main); padding: 15px; box-sizing: border-box; font-family: inherit; margin-bottom: 20px;">
-                <button type="submit" class="btn-gold" style="width: 100%; margin-top: 0;">Secure My Spot</button>
-            </form>
-            <div id="success-message" style="display: none; text-align: center; padding: 20px; background-color: rgba(212, 175, 55, 0.1); border: 1px solid var(--brand-gold); max-width: 500px; margin: auto;">
-                <p style="color: var(--brand-gold); font-weight: bold; margin: 0; text-align: center;">You're on the list. We'll reach out when the vault opens.</p>
             </div>
         </div>
     </div>
@@ -197,42 +200,6 @@
 
     hamburgerBtn.addEventListener('click', function() {
         navLinks.classList.toggle('active');
-    });
-
-    // Supabase Integration
-    const waitlistForm = document.getElementById('waitlist-form');
-    const waitlistContainer = document.getElementById('waitlist-container');
-    const successMessage = document.getElementById('success-message');
-
-    waitlistForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const email = document.getElementById('email').value;
-        const supabaseUrl = 'https://jlyatwrvpxpswbpdvydv.supabase.co';
-        const supabaseKey = 'sb_publishable_pDXo04sUaaSd4UbxhYS8UA_SppR-j4K';
-
-        fetch(`${supabaseUrl}/rest/v1/waitlist_emails`, {
-            method: 'POST',
-            headers: {
-                'apikey': supabaseKey,
-                'Authorization': `Bearer ${supabaseKey}`,
-                'Content-Type': 'application/json',
-                'Prefer': 'return=minimal'
-            },
-            body: JSON.stringify({ email: email })
-        })
-        .then(response => {
-            if (response.ok) {
-                waitlistForm.style.display = 'none';
-                successMessage.style.display = 'block';
-            } else {
-                alert('There was an error joining the waitlist. Please try again.');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error joining the waitlist. Please try again.');
-        });
     });
 </script>
 
