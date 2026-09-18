@@ -22,7 +22,8 @@
         
         /* --- NAVIGATION BAR --- */
         .top-nav { background-color: #000; border-bottom: 2px solid var(--brand-gold); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-        .nav-brand { color: var(--brand-gold); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 1.2em; }
+        .nav-brand { color: var(--brand-gold); font-weight: bold; letter-spacing: 2px; text-transform: uppercase; font-size: 1.2em; text-decoration: none; transition: color 0.2s; }
+        .nav-brand:hover { color: var(--brand-action); }
         .nav-links { display: flex; gap: 20px; }
         .nav-links a { color: var(--text-main); text-decoration: none; text-transform: uppercase; font-weight: bold; transition: color 0.2s; }
         .nav-links a:hover { color: var(--brand-action); }
@@ -101,7 +102,7 @@
 <body>
 
 <nav class="top-nav">
-    <div class="nav-brand">DONKEY JAW SERVICES</div>
+    <a href="/" class="nav-brand">DONKEY JAW SERVICES</a>
     <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
         <span></span><span></span><span></span>
     </button>
@@ -111,7 +112,7 @@
         <a href="/pledge">ENVIRONMENTAL PLEDGE</a>
         <a href="/web-dev">WEB DEVELOPMENT</a>
         <a href="/truemule">TRUEMULE</a>
-        <a href="/maintenancevault">MAINTENANCE VAULT</a>
+        <a href="https://maintenancevaultapp.com" target="_blank">MAINTENANCE VAULT</a>
         <a href="/support">SUPPORT THE BUILD</a>
     </div>
 </nav>
@@ -124,7 +125,7 @@
     <div class="card">
         <h2>The Tip Jar</h2>
         <p>
-            FUEL THE BUILD. I built Donkey Jaw Services to give the trades a digital advantage. I’m a solo developer bootstrapping these tools from the ground up—no corporate backing, just late nights and sweat equity. If Maintenance Vault or TrueMule Calculator helps you run your shop, track your gear, or protect your margins, consider throwing a few bucks in the tip jar. Every contribution goes directly toward server costs and keeping these tools running.
+            FUEL THE BUILD. I built Donkey Jaw Services to give the trades a digital advantage. I’m a solo developer bootstrapping these tools from the ground up—no corporate backing, just late nights and sweat equity. If Donkey Jaw tools help you run your shop, track your gear, or protect your margins, consider throwing a few bucks in the tip jar. Every contribution goes directly toward server costs and bootstrapping the next build.
         </p>
 
         <div class="tip-jar-container">
@@ -145,8 +146,8 @@
         <h2>Frequently Asked Questions</h2>
         
         <div class="faq-item">
-            <h3>Are Maintenance Vault and TrueMule Calculator free?</h3>
-            <p>Our priority is keeping the core, everyday features accessible to the guys on the ground. As these tools evolve, we will introduce Premium tiers for commercial fleets and power users who need advanced, heavy-duty data tracking. For now, the tip jar helps keep the foundational infrastructure running for everyone.</p>
+            <h3>Are your apps free to use?</h3>
+            <p>Maintenance Vault is a premium tool accessible for just $4.99/mo or $49.99/yr, ensuring your asset data is securely hosted and reliably tracked without the bloated fees of commercial software. TrueMule Calculator is currently in active development. Dropping a few bucks in the tip jar helps fund the ongoing build of TrueMule and keeps the foundational infrastructure running.</p>
         </div>
 
         <div class="faq-item">
