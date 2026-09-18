@@ -36,8 +36,9 @@
 
         /* --- PRICING & LAUNCH BLOCK --- */
         .launch-container { margin-top: 30px; text-align: center; }
-        .pricing-text { font-size: 1.4em; font-weight: bold; color: var(--text-main); margin-bottom: 20px; letter-spacing: 1px; }
-        .pricing-text span { color: var(--brand-gold); font-size: 1.2em; }
+        .pricing-text { font-size: 1.4em; font-weight: bold; color: var(--text-main); margin-bottom: 20px; letter-spacing: 1px; line-height: 1.4; }
+        .pricing-text span.free { color: var(--brand-gold); font-size: 1.4em; display: block; }
+        .pricing-text span.premium { color: #888; font-size: 0.7em; font-weight: normal; letter-spacing: 0; }
 
         section { max-width: 900px; margin: auto; padding: 60px 20px; }
         h2 { color: var(--brand-gold); text-transform: uppercase; font-size: 1.8em; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-top: 0; }
@@ -103,7 +104,7 @@
         <a href="/pledge">ENVIRONMENTAL PLEDGE</a>
         <a href="/web-dev">WEB DEVELOPMENT</a>
         <a href="/truemule">TRUEMULE</a>
-        <a href="https://maintenancevaultapp.com" target="_blank">MAINTENANCE VAULT</a>
+        <a href="/maintenancevault">MAINTENANCE VAULT</a>
         <a href="/support">SUPPORT THE BUILD</a>
     </div>
 </nav>
@@ -113,7 +114,10 @@
     <p class="tagline">The Universal Maintenance Tracker</p>
     
     <div class="launch-container">
-        <p class="pricing-text"><span>$4.99</span>/mo OR <span>$49.99</span>/yr</p>
+        <p class="pricing-text">
+            <span class="free">FREE TO START</span>
+            <span class="premium">Premium Tier: $4.99/mo OR $49.99/yr</span>
+        </p>
         <a href="https://maintenancevaultapp.com" class="btn-gold" target="_blank" style="font-size: 1.2em; padding: 20px 40px;">Launch Maintenance Vault</a>
     </div>
 </header>
@@ -147,8 +151,8 @@
                 <p>If it has a filter, a battery, or a recurring service window, track it here. Automated scheduling ensures you never blow past a critical fluid change or inspection date again.</p>
             </div>
             <div class="feature-box">
-                <h3>Straightforward Pricing</h3>
-                <p>The core tools are built to be accessible for the everyday consumer. Premium fleet-management tiers (MVProCom) will be available soon for heavy-duty commercial operations.</p>
+                <h3>Free To Start</h3>
+                <p>The core daily-driver tools are completely free to start. When you need heavy-duty commercial tracking and secure cloud hosting, our Premium tier is just $4.99/mo or $49.99/yr. No hidden fees.</p>
             </div>
         </div>
 
