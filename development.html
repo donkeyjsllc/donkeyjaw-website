@@ -97,7 +97,7 @@
             letter-spacing: 1px; 
         }
 
-        section { max-width: 850px; margin: auto; padding: 60px 20px; }
+        section { max-width: 850px; margin: auto; padding: 40px 20px 60px; }
         
         /* The Card Layout */
         .card { 
@@ -124,6 +124,37 @@
             margin-bottom: 15px; 
         }
         .card p:last-child { margin-bottom: 0; }
+
+        /* Buttons */
+        .btn-gold { 
+            display: inline-block; 
+            background-color: var(--brand-action); 
+            color: #000; 
+            text-decoration: none; 
+            padding: 15px 30px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            border: none; 
+            cursor: pointer; 
+            transition: 0.2s; 
+            margin-top: 15px; 
+        }
+        .btn-gold:hover { background-color: var(--brand-gold); }
+
+        /* Top CTA Layout */
+        .top-cta {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+        .top-cta p {
+            font-size: 1.2em;
+            color: var(--brand-action);
+            font-weight: bold;
+            text-transform: uppercase;
+        }
 
         /* --- MOBILE RESPONSIVENESS --- */
         @media (max-width: 768px) {
@@ -190,6 +221,13 @@
 </header>
 
 <section>
+    <!-- TOP CTA -->
+    <div class="top-cta">
+        <p>Need a custom digital tool or app built for your business?</p>
+        <a href="mailto:info@donkeyjawservices.com" class="btn-gold">Hire Us to Build It</a>
+    </div>
+
+    <!-- DEVELOPMENT CARDS -->
     <div class="card">
         <h2>TrueMule Calculator</h2>
         <p>
@@ -232,6 +270,15 @@
         <p>
             While Maintenance Vault is live for everyday users, we are actively architecting MVProCom—a heavy-duty premium tier built specifically for commercial fleet tracking, multi-user permissions, and advanced reporting.
         </p>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div class="card" style="text-align: center; border-left: none; border-top: 4px solid var(--brand-action);">
+        <h2 style="border-bottom: none; margin-bottom: 10px; color: var(--text-main);">Got a Custom Build in Mind?</h2>
+        <p style="text-align: center; margin-bottom: 25px;">
+            Don't see what you need in the pipeline? We engineer rugged, no-nonsense software solutions tailored specifically to your operation. Let's talk shop.
+        </p>
+        <a href="mailto:info@donkeyjawservices.com" class="btn-gold">Email for Custom Dev</a>
     </div>
 </section>
 
